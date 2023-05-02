@@ -1,0 +1,80 @@
+.apresentacao{
+    flex-direction: column-reverse;
+    align-content: center;
+    padding: 15px;
+    align-items: center;
+}
+
+#foto_perfil{
+    width: 150px;
+    height: 150px;
+}
+
+/*Acima, estilização vertical da minha apresentação (Nome e Foto)*/
+
+.grade h2{
+    margin: 20px 5%;
+}   
+
+.cards{
+    display: grid;
+    width: 90vw;
+    margin: 0 5vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.cards div{
+    height: auto;
+    width: 1fr;
+    min-width: 400px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.cards img{
+    min-width: 200px;
+    max-width: 90%;
+    margin: 10px 0;
+}
+
+.cards h3{
+    text-shadow: 2px 2px 5px rgba(255, 251, 0);
+    background-color: white;
+    color: black;
+}
+
+.cards p{
+    text-align: justify;
+    color: black;
+    padding: 10px;
+}
+
+/* Agora, serão atribuídas as estilizações responsivas */
+
+@media (min-width: 1024px) and (max-width: 1500px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .cards div{
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 1024px){
+    .cards{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        min-width: 300px;
+    }
+
+    .cards div{
+        max-width: 70vw;
+        margin: 0 auto;
+    }
+}

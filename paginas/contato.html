@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="Stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="Stylesheet" type="text/css" href="../css/contato.css"/>
+    <link rel="icon" href="../img/logo.jpg">
+    <title>Contatos</title>
+</head>
+
+<body>
+    <header>        
+        <nav>
+            <ul class="redirecionador">
+                <li> <a href="../index.html"> Home </a> </li>
+                <li> <a href="./projetos.html"> Projetos </a> </li>
+                <li> <a href="./contato.html"> Contato </a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="apresentacao">      <!--sessão de "apresentação, com meu nome e foto"-->
+        <div id="titulos">
+            <h1>Jimar Castro</h1>
+            <h2>Desenvolvedor Front-end</h2>
+        </div>
+        <div id="foto">
+            <img id="foto_perfil" src="../img/perfil.png"/>
+        </div>
+    </section>
+
+    <main>
+        <h2>Envie-me uma mensagem</h2>
+        <form action="https://api.staticforms.xyz/submit" method="post" autocomplete="off">
+            <input type="hidden" name="accessKey" value="5704a142-c72e-4187-8b9c-2acaf02a2957"/>
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/paginas/contato.html"/>
+
+            <label>Nome</label>
+            <input type="text" id="nome" name="$nome" placeholder="Digite seu nome" required/>
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="email@email.com" required/>
+            <label>Mensagem</label>
+            <textarea name="$mensagem" cols="30" rows="8"></textarea> <!--O '$' serve para atribuição personalizada-->
+
+            <nav>
+                <button id="reset" type="reset">Apagar</button>
+                <button id="submit" type="submit" onclick="alerta()">Enviar</button>
+            </nav>
+        </form>
+    </main>
+
+    <script>
+        function alerta(){
+            alert("Obrigado pelo contato, em breve responderei!");
+        }
+    </script>
+
+</body>
+</html>
